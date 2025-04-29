@@ -114,3 +114,8 @@ async def chat(request: ChatRequest):
         return {"error": "Unexpected response", "raw_response": data}
 
     return {"reply": data["choices"][0]["message"]["content"]}
+
+
+@app.get("/debug/env")
+def debug_env():
+    return {"OPENROUTER_API_KEY": os.getenv("OPENROUTER_API_KEY")}
