@@ -92,7 +92,7 @@ async def chat(request: ChatRequest):
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
-        "HTTP-Referer": "BWashishtha.github.io",
+        "HTTP-Referer": "care-agent.netlify.app",
         "X-Title": "Conversational Support AI"
     }
 
