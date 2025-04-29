@@ -1,3 +1,4 @@
+import React from 'react';
 import ChatUI from './chatUI'
 
 function App() {

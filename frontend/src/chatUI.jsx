@@ -114,6 +114,7 @@
 // }
 
 // export default ChatUI;
+import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
