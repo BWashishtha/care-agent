@@ -93,7 +93,7 @@ async def chat(request: ChatRequest):
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
         "HTTP-Referer": "care-agent.netlify.app",
-        "X-Title": "Conversational Support AI"
+        "X-Title": "Conversational Support AI",
         "TestKey": "TestValue"
     }
 
@@ -102,7 +102,9 @@ async def chat(request: ChatRequest):
         "messages": request.messages
     }
     print("=== DEBUG: Headers being sent to OpenRouter ===")
-    print(headers)
+    for key, value in headers.items():
+        print(f"{key}: {value}")
+    print("===============================================")
     async with httpx.AsyncClient() as client:
         response = await client.post(
             "https://openrouter.ai/api/v1/chat/completions",
