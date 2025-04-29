@@ -75,7 +75,7 @@ app = FastAPI()
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Optional: can lock down later
+    allow_origins=["https://care-agent.netlify.app"],  # ← YOUR NETLIFY FRONTEND ✅
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
